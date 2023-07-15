@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+    .container {
+        margin: 0 auto;
+        width: 1250px;
+    }
+
+    .item {
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 15px;
+        color: aqua;
+        font-size: 19px;
+        font-weight: bold;
+        float: left;
+        width: 20%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-right: 5px;
+    }
+
+    .item a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>
+<script src=""></script>
+<body>
+
+<div class="container">
+    <div class="item">
+        <a href="http://localhost:8101/" target="_blank">Keycloak main</a>
+    </div>
+    <div class="item">
+        <a href="https://localhost:8102/" target="_blank">Keycloak main HTTPS</a>
+    </div>
+    <div class="item">
+        <a href="http://localhost:8101/health" target="_blank">Keycloak health check</a>
+    </div>
+    <div class="item">
+        <a href="http://localhost:8101/health/live" target="_blank">Keycloak health live check</a>
+    </div>
+    <div class="item">
+        <a href="http://localhost:8101/health/ready" target="_blank">Keycloak health ready check</a>
+    </div>
+    <div class="item">
+        <a href="http://localhost:8101/realms/sport/account" target="_blank">Keycloak login page</a>
+    </div>
+    <div class="item">
+        <a href="http://localhost:4200/" target="_blank">UI page</a>
+    </div>
+	
+</div>
+
+</body>
+</html>
