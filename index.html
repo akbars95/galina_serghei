@@ -46,13 +46,14 @@
         font-size: 50px;
     }
 </style>
-<script src=""></script>
+<script>
+</script>
 <body>
 
-
-<!--<audio src="/music/good_enough.mp3" controls>-->
-<!--<p>If you are reading this, it is because your browser does not support the audio element.</p>-->
-<!--</audio>-->
+<audio controls autoplay id="audio_music">
+    <source src="music.mp3" type="audio/mpeg">
+    <p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
 
 <div class="container">
     <h1>С празником!</h1>
@@ -62,5 +63,10 @@
         и всего самого наилучшего!</p>
 </div>
 
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById("audio_music").play();
+    }
+</script>
 </body>
 </html>
