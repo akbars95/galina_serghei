@@ -1,0 +1,22 @@
+<div id="login" *ngIf="!logInSuccess">
+  <div class="row">
+    <label for="personName">Введите пожалуйста ваше имя</label>
+    <input type="text" id="personName" placeholder="ваше имя" [(ngModel)]="personName">
+    <span class="error" *ngIf="errorMessageName">{{errorMessageName}}</span>
+  </div>
+  <div>
+    <label for="weddingDay">Введите день свадьбы</label>
+    <input type="number" id="weddingDay" min="1" max="31" [(ngModel)]="weddingDay">
+    <input type="number" id="weddingMonth" min="1" max="12" [(ngModel)]="weddingMonth">
+    <input type="number" id="weddingYear" min="1900" max="2099" [(ngModel)]="weddingYear">
+    <span class="error" *ngIf="errorMessageDateOfWedding">{{errorMessageDateOfWedding}}</span>
+  </div>
+
+
+  <button type="button" id="clearButton" (click)="clear()">Очистить</button>
+  <button type="button" id="logInButton" (click)="logIn()">Войти</button>
+</div>
+
+<div *ngIf="logInSuccess">
+  <app-congratulation [personName]="personName"></app-congratulation>
+</div>

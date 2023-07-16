@@ -1,0 +1,91 @@
+.container {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 25px;
+  border: 10px dotted white;
+  border-radius: 31px;
+  background-image: linear-gradient(green, yellow, red);
+}
+
+.greeting{
+  background-image: linear-gradient(blue, blueviolet, darkblue);
+}
+
+h1 {
+  text-align: center;
+  color: chocolate;
+  text-shadow: 2px 2px 5px blueviolet;
+  transition: color 2s, text-shadow 4s, letter-spacing 6s;
+
+}
+
+h1:hover {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  letter-spacing: 25px;
+}
+
+.container p {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  transition: text-shadow 4s, font-size 6s;
+}
+
+.container p:hover {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 50px;
+}
+
+
+.box1 {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+  border: 3px solid aqua;
+  background-color: red;
+  position: relative;
+  animation-name: box1;
+  animation-duration: 10s;
+}
+
+@keyframes box1 {
+  0%   {background-color:red; left:0px; top:0px;width: 20px; height: 20px; border: 3px solid aqua; border-radius: 10px;}
+  25%  {background-color:yellow; left:200px; top:0px;width: 30px; height: 30px; border: 3px solid aqua; border-radius: 30px;}
+  50%  {background-color:blue; left:200px; top:200px;width: 40px; height: 40px; border: 3px solid aqua; border-radius: 40px;}
+  75%  {background-color:green; left:0px; top:200px;width: 50px; height: 50px; border: 3px solid aqua; border-radius: 50px;}
+  90% {background-color:red; left:0px; top:0px;width: 100px; height: 100px; border: 3px solid aqua; border-radius: 75px;}
+  100% {width: 0; height: 0; border: 0px; border-radius: 0px;}
+}
+
+.names {
+  font-size: 75px;
+  font-family: fantasy;
+  position: absolute;
+  top: 5px;
+  left: 250px;
+  z-index: 50;
+  color: green;
+  letter-spacing: 10px;
+  word-spacing: 25px;
+  text-shadow: 1px 1px 2px yellow, 0 0 25px blue, 0 0 5px #ffbf00;
+}
+
+.names:hover {
+  color: white;
+  text-shadow: 1px 1px 2px yellow;
+}
+
+.sign {
+  float: right;
+  font-size: 19px;
+  color: white;
+  margin-bottom: 19px;
+}
+
+.sign:after{
+  clear: right;
+}
