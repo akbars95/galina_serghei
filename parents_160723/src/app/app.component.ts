@@ -13,8 +13,8 @@ export class AppComponent {
   weddingYear: number = new Date().getFullYear();
   errorMessageName: string = '';
   errorMessageDateOfWedding: string = '';
-  nameVariants = ["Александр", "Валентина", "Саша", "Валя"];
-  weddingDate: Date = new Date(1989, 7, 16);
+  nameVariants = ["Сергей", "Галина", "Серёжа", "Сережа", "Галя"];
+  weddingDate: Date = new Date(1984, 9, 22);
   logInSuccess: boolean = false;
 
   clear(): void {
@@ -28,14 +28,14 @@ export class AppComponent {
     let isRightPersonName = false;
     let isRightDateOfWedding = false;
 
-    if (this.nameVariants.find(element => element.toLowerCase() == this.personName.toLowerCase())) {
+    if (this.nameVariants.find((element) => element.toLowerCase() == this.personName.toLowerCase())) {
       isRightPersonName = true;
     } else {
       this.errorMessageName = 'Не правильное имя!';
       this.personName = '';
     }
 
-    if (this.weddingYear == 1989 && this.weddingMonth == 7 && this.weddingDay == 16) {
+    if (this.weddingYear == 1984 && this.weddingMonth == 9 && this.weddingDay == 22) {
       isRightDateOfWedding = true;
     } else {
       this.errorMessageDateOfWedding = 'Не правильное день свадьбы!';
