@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  pathToAssets: "galina_serghei/"
+  pathToAssets: "./galina_serghei/"
 };
