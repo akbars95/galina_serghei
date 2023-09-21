@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-congratulation',
@@ -14,7 +15,7 @@ export class CongratulationComponent implements OnInit {
 
   ngOnInit(): void {
     let cur = this.nameVariants[this.getRandomInt(this.nameVariants.length - 1)];
-    this.currentMusic = `../assets/${cur}.mp3`;
+    this.currentMusic = `${environment.pathToAssets}assets/${cur}.mp3`;
   }
 
   getRandomInt(max: number): number {
@@ -22,3 +23,4 @@ export class CongratulationComponent implements OnInit {
   }
 
 }
+
