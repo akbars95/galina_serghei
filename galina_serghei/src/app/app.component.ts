@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if (document.cookie.length > 0) {
-      console.log('document.cookie', document.cookie)
       let cookies = document.cookie.split(';');
       for (let i = 0; i < cookies.length; i++) {
         let cookieCurrent = cookies[i].split("=");
@@ -28,7 +27,6 @@ export class AppComponent implements OnInit {
             this.personName = cookieCurrent[1].trim();
             if (this.personName && this.personName.length > 0) {
               this.logInSuccess = true;
-              console.log("true")
               break;
             }
           }
@@ -46,7 +44,6 @@ export class AppComponent implements OnInit {
 
   logIn(): void {
     if (!this.logInSuccess) {
-      console.log("log in")
       let isRightPersonName = false;
       let isRightDateOfWedding = false;
 
@@ -81,7 +78,6 @@ export class AppComponent implements OnInit {
     document.cookie = `${AppComponent.COOKIE_NAME}=;${tempDate};path=/`;
     this.logInSuccess = false;
     this.personName = '';
-    console.log("Log out!")
   }
 
 }
