@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
       for (let i = 0; i < cookies.length; i++) {
         let cookieCurrent = cookies[i].split("=");
         if (cookieCurrent.length == 2) {
-          if (cookieCurrent[0] == AppComponent.COOKIE_NAME) {
-            this.personName = cookieCurrent[1];
+          if (cookieCurrent[0].trim() == AppComponent.COOKIE_NAME) {
+            this.personName = cookieCurrent[1].trim();
             if (this.personName && this.personName.length > 0) {
               this.logInSuccess = true;
               console.log("true")
