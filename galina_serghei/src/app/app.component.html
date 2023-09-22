@@ -20,3 +20,5 @@
 <div *ngIf="logInSuccess">
   <app-congratulation [personName]="personName"></app-congratulation>
 </div>
+
+<button *ngIf="logInSuccess" class="logOut" (click)="logOut()">Выйти</button>
